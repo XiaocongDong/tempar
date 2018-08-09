@@ -7,6 +7,8 @@ const is = {
   func: v => typeof v === 'function'
 }
 
+const cloneObj = obj => JSON.parse(JSON.stringify(obj))
+
 const getValueWithKeyFromContexts = (key, contexts) => {
   const keys = getKeys(key)
   for (let context of contexts) {
@@ -77,6 +79,7 @@ const removeLastNewLine = (str) => {
 module.exports = {
   is,
   getKeys,
+  cloneObj,
   removeFirstNewLine,
   removeLastNewLine,
   getValueWithKeyFromContexts,
