@@ -44,7 +44,13 @@ const handleIfBlock = (block, contexts) => {
     return ''
   }
 
-  const contextsForChild = [value, ...contexts]
+  const contextsForChild = [...contexts]
+
+  if (is.pureObject(value)) {
+    // Only pure object, we add it to context stack.
+    contextsForChild.unshift(value)
+  }
+
   const lastIndex = childrenBlocks.length - 1
   return childrenBlocks.reduce((prev, block, index) => {
     if (block.type === blockTypes.TEXT && index === lastIndex) {
