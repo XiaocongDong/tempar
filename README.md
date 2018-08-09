@@ -1,2 +1,2 @@
-# rg-compiler
-Lightweight compiler for regen template.
+# Tarser
+Lightweight Template Parser.
