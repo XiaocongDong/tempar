@@ -1,5 +1,5 @@
 const { blockTypes } = require('./constants')
-const { is, getValueWithKeyFromContexts, removeFirstNewLine } = require('../util')
+const { is, getValueWithKeyFromContexts, removeLastNewLine, cloneObj } = require('../util')
 
 const handleTextBlock = (block) => {
   const { payload: { value }} = block
@@ -54,7 +54,7 @@ const handleIfBlock = (block, contexts) => {
   const lastIndex = childrenBlocks.length - 1
   return childrenBlocks.reduce((prev, block, index) => {
     if (block.type === blockTypes.TEXT && index === lastIndex) {
-      beautifyTextBlock(block)
+      block = beautifyTextBlock(block)
     }
     return prev + stringify(block, contextsForChild)
   }, '')
@@ -78,7 +78,7 @@ const handleListBlock = (block, contexts) => {
 
     return str + childrenBlocks.reduce((childStr, block, index) => {
       if (block.type === blockTypes.TEXT && index === lastIndex) {
-        beautifyTextBlock(block)
+        block = beautifyTextBlock(block)
       }
       return childStr + stringify(block, contextsForChild)
     }, '')
@@ -86,8 +86,10 @@ const handleListBlock = (block, contexts) => {
 }
 
 const beautifyTextBlock = (block) => {
+  block = cloneObj(block)
   const { payload: { value }} = block
-  block.payload.value = removeFirstNewLine(value)
+  block.payload.value = removeLastNewLine(value)
+  return block
 }
 
 const handlersMap = {
