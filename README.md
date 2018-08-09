@@ -3,6 +3,11 @@
 
 For template parsing, we already got [handlebars.js](https://github.com/wycats/handlebars.js/) and [mustache.js](https://github.com/janl/mustache.js/), they are awesome and powerful, but sometime, they may be too `heavy` for our need, we just need a light-weight template parser for generating our text from a template to get the shit done! If you have the same problem as me, Tempar can save you from the headache, it is light-weight (no more than 500 lines of code, no dependencies), flexible and maybe powerful.
 
+## Installation
+```
+npm install tempar
+```
+
 ## Usage
 Below is a quick example for using Tempar.
 
@@ -129,7 +134,7 @@ Despite the `#if` statement, `if tag` needs the key of the value you want to eva
 
 Notes: If the value that are evaluated is a pure object, it will become the active context of its children blocks.
 
-### Each
+### EACH
 Example:
 {{#each comments}}
   {{athor.name}}: {{content}}
