@@ -1,8 +1,9 @@
 {
   "name": "tempar",
   "version": "0.0.1",
-  "main": "./dist/tempar.js",
+  "main": "src/index.js",
   "repository": "https://github.com/XiaocongDong/tempar.git",
+  "description": "Light-weight template parser for anything.",
   "author": "Xiaocong Dong<buptdxc@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -16,6 +17,17 @@
       "standard"
     ]
   },
+  "keywords": [
+    "template",
+    "parser",
+    "html",
+    "node",
+    "light-weight",
+    "indentation",
+    "tempar",
+    "handlebars",
+    "mustache"
+  ],
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-preset-env": "^1.6.0",
