@@ -1,3 +1,3 @@
-const parser = require('parser')
+const Parser = require('./parser')
 
-module.exports = parser
+module.exports = Parser
