@@ -1,6 +1,6 @@
 {
   "name": "tempar",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/tempar.node.js",
   "module": "dist/tempar.browser.js",
   "repository": "https://github.com/XiaocongDong/tempar.git",
