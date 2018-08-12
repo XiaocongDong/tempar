@@ -8,6 +8,9 @@ For template parsing, we already got [handlebars.js](https://github.com/wycats/h
 npm install tempar
 ```
 
+## Supported Environment
+Both Node and most of the browser environment.
+
 ## Usage
 Below is a quick example for using Tempar.
 
