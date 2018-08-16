@@ -1,7 +1,7 @@
 # Tempar - Lightweight Template Parser
 ## Notes: 🚧🚧🚧Both the code and documentation of this project is under construction, try not to use it in your real project now.
 
-For template parsing, we already got [handlebars.js](https://github.com/wycats/handlebars.js/) and [mustache.js](https://github.com/janl/mustache.js/), they are awesome and powerful, but sometime, they may be too `heavy` for our need, we just need a light-weight template parser for generating our text from a template to get the shit done! If you have the same problem as me, Tempar can save you from the headache, it is light-weight (no more than 500 lines of code, no dependencies), flexible and maybe powerful.
+For template parsing, we already got [handlebars.js](https://github.com/wycats/handlebars.js/) and [mustache.js](https://github.com/janl/mustache.js/), they are awesome and powerful, but sometime, they may be too `heavy` for our need, we just need a lightweight template parser for generating our text from a template to get the shit done! If you have the same problem as me, Tempar can save you from the headache, it is lightweight (no more than 500 lines of code, no dependencies), flexible and maybe powerful.
 
 ## Installation
 ```
